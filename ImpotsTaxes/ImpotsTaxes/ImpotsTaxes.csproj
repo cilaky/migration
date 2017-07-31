@@ -95,9 +95,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\MigrationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Adress.cs" />
+    <Compile Include="Models\Assessment.cs" />
+    <Compile Include="Models\ConnectionBD.cs" />
+    <Compile Include="Models\FiscalEntity.cs" />
+    <Compile Include="Models\Liste.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\SysConnection.cs" />
+    <Compile Include="Models\Tax.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -190,8 +199,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
