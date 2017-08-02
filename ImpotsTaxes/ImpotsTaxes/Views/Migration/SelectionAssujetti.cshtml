@@ -47,7 +47,7 @@
                      <tr style="font-size:1em">
                          <td class="td" >@ass.nbre</td>
                          <td class="td" >@ass.Id_person</td>
-                         <td class="td" ><a href="Migration/SelectionAssujetti?nom=@ass.name">@ass.name</a></td>
+                         <td class="td" ><a href="/Migration/NotePerception?idPersAS=@Request.Params["idPersAS"]&idPersNS=@ass.Id_person&nom=@ass.name&tel=@ass.telephone&ville=@ass.town_dist&quartier=@ass.quarter&avenue=@ass.avenue&numero=@ass.number">@ass.name</a></td>
                          <td class="td" >@ass.initials</td>
                          <td class="td" >@ass.numid_nat</td>
                          <td class="td" >@ass.tax_num_dgi</td>  
