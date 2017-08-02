@@ -36,6 +36,7 @@ namespace ImpotsTaxes.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult AffichageNote()
         {
             ConnectionDB con = new ConnectionDB(1);
@@ -94,7 +95,7 @@ namespace ImpotsTaxes.Controllers
                                     "INNER JOIN tProvince ON tVille.IdProv=tProvince.IdProv "+
                                     "LEFT JOIN tPaiementNote ON tNotePercepteur.IdNote=tPaiementNote.IdNote "+
                                     "WHERE " + 
-                                    "tNotePercepteur.IdNote = '006924/2016' "
+                                    "tNotePercepteur.IdNote = '" + Request.Params["note"] + "' "
                                     , "tax_assessment");
             Assessment ass = new Assessment()
             {
