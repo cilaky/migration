@@ -145,6 +145,48 @@ namespace ImpotsTaxes.Models
                 });
             }
             return lst;
-        } 
+        }
+
+
+        //LISTE DES NOTES DE L'ASSUJETTI
+        //==============================
+        public List<Assessment> lstNotes(string idAssujetti)
+        {
+            ConnectionDB con = new ConnectionDB(1);
+            DataTable dtt = con.Data_Source("select "+
+                                            "IdNote, "+
+                                            "CONVERT(VARCHAR(10),DateNote,103) as DateNote, " +
+                                            "MontantEnChiffre, "+
+                                            "Devise, "+
+                                            "tArticleBudjetaire.IdArticle, "+
+                                            "tArticleBudjetaire.LibelleArticle, "+
+                                            "tAntenne.Designation "+
+                                            "from "+ 
+                                            "tNotePercepteur "+ 
+                                            "INNER JOIN tAssujetti ON tNotePercepteur.NumImpot=tAssujetti.NumImpot "+
+                                            "INNER JOIN tArticleBudjetaire ON tNotePercepteur.IdArticle=tArticleBudjetaire.IdArticle "+
+                                            "INNER JOIN tAntenne ON tNotePercepteur.IdAntenne=tAntenne.IdAntenne " +
+                                            "where tAssujetti.NumImpot='" + idAssujetti + "'"
+                                            , "tNotePercepteur");
+
+            List<Assessment> lst = new List<Assessment>();
+            for (int i = 0; i < dtt.Rows.Count; i++)
+            {
+                lst.Add(new Assessment()
+                {
+                    assessment_id = dtt.Rows[i]["IdNote"].ToString(),
+                    assessment_date = dtt.Rows[i]["DateNote"].ToString(),
+                    amount = Convert.ToDouble(dtt.Rows[i]["MontantEnChiffre"].ToString()),
+                    currency = dtt.Rows[i]["Devise"].ToString(),
+                    tax_id = dtt.Rows[i]["IdArticle"].ToString(),
+                    tax_name = dtt.Rows[i]["LibelleArticle"].ToString(),
+                    entity_name = dtt.Rows[i]["Designation"].ToString()
+                    
+                });
+            }
+            return lst;
+        }
+
+
     }
 }
