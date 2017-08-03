@@ -145,5 +145,10 @@ namespace ImpotsTaxes.Controllers
             ViewBag.note = ass;
             return View();
         }
+
+        public ActionResult Migrer()
+        {
+            return View();
+        }
     }
 }
