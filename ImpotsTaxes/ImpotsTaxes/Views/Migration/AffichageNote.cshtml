@@ -26,6 +26,13 @@
                 // Pour arrêter le clignotement : clearInterval(periode);
                 periode = setInterval(clignotement, 800);
             </script>
+
+            <script type="text/css">
+                input
+                {
+                    width:200px;
+                }
+            </script>
         </head>
 
         <body >
@@ -45,9 +52,13 @@
                 <table>
                     <tr>
                         <td>SERVICE ou ENTITE FISCAL:</td> 
-                        <td class="filltext">@notePerc.entity_name</td>
+                        <td class="filltext">
+                            <select>
+                                <option>@notePerc.entity_name</option>
+                            </select>
+                        </td>
                         <td>DATE:</td>                        
-                        <td class="filltext">@notePerc.assessment_date </td>
+                        <td class="filltext"><input type="text" value="@notePerc.assessment_date" /> </td>
                     </tr>
                     <tr>
                         <td>TERRITOIRE OU VILLE:</td>
@@ -70,7 +81,7 @@
                         
                         <tr>
                             <td>- Note de debit ou de taxation Num:</td>
-                            <td class="filltext">@notePerc.taxation_base N°:@notePerc.taxation_base_id</td>
+                            <td class="filltext"><input type="text" value="@notePerc.taxation_base" style="width:100px;" /> N°:<input type="text" value="@notePerc.taxation_base_id" style="width:100px;" /></td>
                             <td> Nom ou raison sociale:</td>
                             <td class="filltext">@notePerc.taxpayer_name</td>
                         </tr>
@@ -84,7 +95,7 @@
 
                         <tr>
                             <td>- Article budgetaire:</td>
-                            <td class="filltext">@notePerc.tax_id</td>
+                            <td class="filltext"><input type="text" value="@notePerc.tax_id" /><a href="#">Modifier l'article</a></td>
                             <td>Ville:</td>
                             <td class="filltext">@notePerc.adresse.town_dist</td>
                         </tr> 
