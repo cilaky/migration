@@ -83,70 +83,70 @@
                             <td>- Note de debit ou de taxation Num:</td>
                             <td class="filltext"><input type="text" value="@notePerc.taxation_base" style="width:100px;" /> N°:<input type="text" value="@notePerc.taxation_base_id" style="width:100px;" /></td>
                             <td> Nom ou raison sociale:</td>
-                            <td class="filltext">@notePerc.taxpayer_name</td>
+                            <td class="filltext"><input type="text" value="@notePerc.taxpayer_name" style="width:100px;" /></td>
                         </tr>
 
                         <tr>
                             <td>- Acte generateur(libelle):</td>
-                            <td class="filltext">@notePerc.tax_name</td>
+                            <td class="filltext"><input type="text" value="@notePerc.tax_name" style="width:100px;" /></td>
                             <td>P/C:</td>
-                            <td class="filltext">@notePerc.on_account_of</td>
+                            <td class="filltext"><input type="text" value="@notePerc.on_account_of" style="width:100px;" /></td>
                         </tr>
 
                         <tr>
                             <td>- Article budgetaire:</td>
-                            <td class="filltext"><input type="text" value="@notePerc.tax_id" /><a href="#">Modifier l'article</a></td>
+                            <td class="filltext"><input type="text" value="@notePerc.tax_id" style="width:100px;" /><a href="#">Modifier l'article</a></td>
                             <td>Ville:</td>
-                            <td class="filltext">@notePerc.adresse.town_dist</td>
+                            <td class="filltext"><input type="text" value="@notePerc.adresse.town_dist" style="width:100px;" /></td>
                         </tr> 
                                
                         <tr>
                             <td>Nombre de pieces justificatives:</td>
                             <td></td>
                             <td>Commune:</td>
-                            <td class="filltext">@notePerc.adresse.commune</td>
+                            <td class="filltext"><input type="text" value="@notePerc.adresse.commune" style="width:100px;" /></td>
                         </tr>
 
                         <tr>
                             <td>- Taux et reference du texte:</td>
-                            <td class="filltext">@notePerc.text_reference</td>
+                            <td class="filltext"><input type="text" value="@notePerc.text_reference" style="width:100px;" /></td>
                             <td>Quartier:</td>
-                            <td class="filltext">@notePerc.adresse.quarter_sect</td>
+                            <td class="filltext"><input type="text" value="@notePerc.adresse.quarter_sect" style="width:100px;" /></td>
                         </tr>
 
                         <tr>
                             <td>- Montant à payer:-en chiffres:</td>
-                            <td class="filltext">@notePerc.amount @notePerc.currency</td>
+                            <td class="filltext"><input type="text" value="@notePerc.amount @notePerc.currency" style="width:100px;" /></td>
                             <td>Avenue:</td>
-                            <td class="filltext">@notePerc.adresse.avenue_loc</td>
+                            <td class="filltext"><input type="text" value="@notePerc.adresse.avenue_loc" style="width:100px;" /></td>
                         </tr>
 
                         <tr>
                             <td>- En lettres:</td>
-                            <td class="filltext">@notePerc.amount_in_words</td>
+                            <td class="filltext"><input type="text" value="@notePerc.amount_in_words" style="width:100px;" /></td>
                             <td>Num:</td>
-                            <td class="filltext">@notePerc.adresse.number</td>
+                            <td class="filltext"><input type="text" value="@notePerc.adresse.number" style="width:100px;" /></td>
                         </tr>
 
                         <tr>
                             <td>Nom de l'agent taxateur:</td>
-                            <td class="filltext">@notePerc.taxman_name</td>
+                            <td class="filltext"><input type="text" value="@notePerc.taxman_name" style="width:100px;" /></td>
                             <td>B.P:</td>
-                            <td class="filltext">@notePerc.taxPayer.p_o_box</td>
+                            <td class="filltext"><input type="text" value="@notePerc.taxPayer.p_o_box" style="width:100px;" /></td>
                         </tr>
 
                         <tr>
                             <td></td>
                             <td></td>
                             <td>Tel:</td>
-                            <td class="filltext">@notePerc.taxPayer.telephone</td>
+                            <td class="filltext"><input type="text" value="@notePerc.taxPayer.telephone" style="width:100px;" /></td>
                         </tr>
 
                         <tr>
                             <td></td>
                             <td></td>
                             <td>E-mail:</td>
-                            <td class="filltext">@notePerc.taxPayer.email</td>
+                            <td class="filltext"><input type="text" value="@notePerc.taxPayer.email" style="width:100px;" /></td>
                         </tr>
                     </table>
                 </fieldset>
@@ -156,26 +156,26 @@
                     <table> 
                         <tr>
                         <td>Date d'ordonnancement</td>
-                        <td class="filltext">@notePerc.validation_date</td>
+                        <td class="filltext"><input type="text" value="@notePerc.validation_date" style="width:100px;" /></td>
                         </tr>
 
 	                <tr>
                         <td>Avis motivé de l'ordonnateur</td>
-	                    <td class="filltext">@notePerc.notice</td>
+	                    <td class="filltext"><input type="text" value="@notePerc.notice" style="width:100px;" /></td>
 	                </tr>
 
 	                <tr>
                         <td>Montant en chiffre</td>
-		                <td class="filltext">@notePerc.amount_validation @notePerc.currency_validation</td>
+		                <td class="filltext"><input type="text" value="@notePerc.amount_validation" style="width:100px;" /> <input type="text" value="@notePerc.currency_validation" style="width:100px;" /></td>
 	                </tr>
 				
 				    <tr>
                         <td>Montant en lettre</td>
-					    <td class="filltext">@notePerc.amount_in_words_validation</td>
+					    <td class="filltext"><input type="text" value="@notePerc.amount_in_words_validation" style="width:100px;" /></td>
 				    </tr>
                         <tr>
                         <td>Ordonnateur</td>
-					    <td class="filltext">@notePerc.validator_name</td>
+					    <td class="filltext"><input type="text" value="@notePerc.validator_name" style="width:100px;" /></td>
 				    </tr>	             
                     </table> 
                 </fieldset>  
@@ -210,42 +210,42 @@
                   <table> 
                         <tr>
                             <td>Date d'apurement</td>
-                            <td class="filltext">@date_apurement</td>
+                            <td class="filltext"><input type="text" value="@date_apurement" style="width:100px;" /></td>
                         </tr>
 
 	                    <tr>
                             <td>Banque</td>
-	                        <td class="filltext">@notePerc.bank</td>
+	                        <td class="filltext"><input type="text" value="@notePerc.bank" style="width:100px;" /></td>
 	                     </tr>
 
 	                     <tr>
                              <td>Numero du Bordereau</td>
-	                         <td class="filltext">@notePerc.receipt_number</td>
+	                         <td class="filltext"><input type="text" value="@notePerc.receipt_number" style="width:100px;" /></td>
 	                     </tr>
 
                         <tr>
                              <td>Date</td>
-	                         <td class="filltext">@date_bordereau</td>
+	                         <td class="filltext"><input type="text" value="@date_bordereau" style="width:100px;" /></td>
 	                     </tr>
 
 	                    <tr>
                             <td>Montant</td>
-		                    <td class="filltext">@montant_paiement</td>
+		                    <td class="filltext"><input type="text" value="@montant_paiement" style="width:100px;" /></td>
 	                    </tr>
 
 				        <tr>
                             <td>Monnaie</td>
-					        <td class="filltext">@notePerc.currency_payment</td>
+					        <td class="filltext"><input type="text" value="@notePerc.currency_payment" style="width:100px;" /></td>
 				        </tr>
 
 				        <tr>
                             <td>Montant en lettre</td>
-					        <td class="filltext">@notePerc.amount_in_words_payment</td>
+					        <td class="filltext"><input type="text" value="@notePerc.amount_in_words_payment" style="width:100px;" /></td>
 				        </tr>
                   
                         <tr>
                             <td>Comptable</td>
-					        <td class="filltext">@notePerc.discharger</td>
+					        <td class="filltext"><input type="text" value="@notePerc.discharger" style="width:100px;" /></td>
 				        </tr>	             
                      </table>
                     </fieldset>
